@@ -1,0 +1,14 @@
+[LogstreamerInput]
+log_directory = "/var/log"
+file_match = 'syslog'
+
+[PayloadEncoder]
+append_newlines = false
+
+[AMQPOutput]
+[AMQPOutput]
+url = "amqp://USERID:PASSWORD@HOSTADDRESS/"
+exchange = "EXCHANGE_NAME"
+exchange_type = "fanout"
+message_matcher = "Payload=~/SEARCHIDENTIFIER/"
+
